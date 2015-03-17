@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AIM</title>
+	<style>
+		#chat {
+			display: none;
+		}
+	</style>
+</head>
+<script src="/socket.io/socket.io.js"></script>
+<script src='./public/javascripts/client.js'></script>
+<script src='./public/javascripts/app.js'></script>
+<script>
+  var socket = io();
+</script>
+<body>
+
+<h1>Antler Oglers & Lovers Instant Messenger</h1>
+
+<div>
+
+<form id='user-login'>
+	<label for="name">enter your name<br><input type="text" name='name' id='name'></label><br>
+	<label for="age">age<br><input type="text" name='age'></label><br>
+	<label for="sex">sex<br><input type="text" name='sex'></label><br>
+	<label for="location">location<br><input type="text" name='location'></label><br>
+	<button id='enter-name'>login</button>
+</form>
+<div id='chat'>
+	<p id='chat-box'></p>
+	<div>
+		<input type="text" id='input-box'>
+		<button id='enter'>Enter</button>
+	</div>
+</div>
+</div>
+</body>
+</html>
